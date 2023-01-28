@@ -10,6 +10,7 @@ class Group(models.Model):
 
     def __str__(self):
         return self.title
+    
 
 class Post(models.Model):
     text = models.TextField()
@@ -24,5 +25,5 @@ class Post(models.Model):
         blank=True, 
         null=True,
         on_delete=models.CASCADE,
-        related_name='posts'
+        related_name='group'
     )
